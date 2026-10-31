@@ -6,7 +6,7 @@ Run the focused decision test first:
 go test ./...
 ```
 
-This service turns a tenant/domain/origin row into an observable onboarding state. It adds the domain, takes the returned `zone_id`, writes the CNAME, asks for verification, and registers a verification callback. Infrai uses the same `INFRAI_API_KEY` and base URL for DNS and the account webhook: one key, one bill covers both capabilities, so this pipeline does not maintain a second credential for completion events.
+This service converts a tenant/domain/origin row into an observable onboarding state. It adds the domain, captures the returned `zone_id`, writes the CNAME, requests verification, and registers a verification callback. Infrai uses the same `INFRAI_API_KEY` and base URL for DNS and the account webhook: one key, one bill covers both capabilities, so this pipeline never has to maintain a second credential for completion events.
 
 ## Run a local worker
 
